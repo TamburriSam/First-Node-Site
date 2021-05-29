@@ -46,7 +46,7 @@ http
     let path = req.url;
     console.log(path);
 
-    if (path === "/") {
+    if (path === "/" || path === "") {
       fs.readFile("index.html", function (err, data) {
         res.writeHead(200, { "Content-type": "text/html" });
         res.write(data);
